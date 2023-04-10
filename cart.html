@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping Cart</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="#">Product Page</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#C:\Users\User1\Downloads\Prog Web2\Template de Bootstrap\try\product_list.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="C:\Users\User1\Downloads\Prog Web2\Template de Bootstrap\try\cart.html">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="C:\Users\User1\Downloads\Prog Web2\Template de Bootstrap\try\checkout.html">Checkout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- End Navigation Bar -->
+
+    <!-- Cart Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h2>Shopping Cart</h2>
+            <hr />
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Product Name</td>
+                  <td>$10.99</td>
+                  <td>
+                    <input
+                      type="number"
+                      class="form-control"
+                      value="1"
+                      min="1"
+                      max="10"
+                    />
+                  </td>
+                  <td>$10.99</td>
+                  <td>
+                    <button class="btn btn-danger">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Product Name</td>
+                  <td>$19.99</td>
+                  <td>
+                    <input
+                      type="number"
+                      class="form-control"
+                      value="1"
+                      min="1"
+                      max="10"
+                    />
+                  </td>
+                  <td>$19.99</td>
+                  <td>
+                    <button class="btn btn-danger">Remove</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-4">
+            <div class="card

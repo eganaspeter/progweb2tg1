@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    /* Add your custom styles here */
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="C:\Users\User1\Downloads\Prog Web2\Template de Bootstrap\try\Iphone 12 pro.jpeg" class="img-fluid" alt="Product Image">
+      </div>
+      <div class="col-md-6">
+        <h1 class="product-title">IPHONE 14</h1>
+        <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius leo ut sapien tristique, in ullamcorper metus bibendum. Proin auctor, orci in finibus consequat, lectus massa tincidunt est, vel aliquet justo ex et orci.</p>
+        <p class="product-price">$19.99</p>
+        <button class="btn btn-primary" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script>
+    function addToCart() {
+      // Get the product details
+      const product = {
+        name: document.querySelector('.product-title').textContent,
+        price: document.querySelector('.product-price').textContent
+      };
+
+      // Get the cart from local storage or create a new one if it doesn't exist
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Check if the product already exists in the cart
+      const existingProductIndex = cart.findIndex(item => item.name === product.name);
+
+      if (existingProductIndex !== -1) {
+        // If the product already exists, increase its quantity by 1
+        cart[existingProductIndex].quantity += 1;
+      } else {
+        // If the product doesn't exist, add it to the cart with quantity of 1
+        cart.push({ ...product, quantity: 1 });
+      }
+
+      // Store the updated cart in local storage
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      // Redirect to the cart page
+      window.location.href = 'cart.html';
+    }
+  </script>
+</body>
+</html>
